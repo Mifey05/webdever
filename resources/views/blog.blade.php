@@ -12,7 +12,7 @@
         <a href="#" class="list-group-item list-group-item-action">
             <h5>{{ $post->name }}</h5>
             <p class="mb-1">{!! nl2br(e($post->content)) !!}</p>
-            <small class="text-muted">Published {{ $post->created_at->diffForHumans() }}</small>
+            <small class="text-muted">  By {{ $post->user->name }} · Published {{ $post->created_at->diffForHumans() }}</small>
         </a>
     @endforeach
 </div>

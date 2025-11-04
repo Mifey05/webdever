@@ -12,7 +12,7 @@
         <a href="#" class="list-group-item list-group-item-action">
             <h5>{{ $proj->name }}</h5>
             <p class="mb-1">{!! nl2br(e($proj->content)) !!}</p>
-            <small class="text-muted">Published {{ $proj->created_at->diffForHumans() }}</small>
+            <small class="text-muted">  By {{ $proj->user->name }} · Published {{ $proj->created_at->diffForHumans() }}</small>
         </a>
     @endforeach
 </div>
